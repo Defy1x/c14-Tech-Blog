@@ -29,6 +29,18 @@ body {
     text-align: left !important;
 }
 
+.form-comment {
+  width: 100%;
+  max-width: 50rem;
+  padding: 15px;
+  margin: auto;
+}
+
+.btn{
+margin-top: 10px;
+};
+
+
 .form-signin {
   width: 100%;
   max-width: 330px;
