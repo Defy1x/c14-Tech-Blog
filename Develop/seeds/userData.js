@@ -14,3 +14,7 @@ const userData = [
         password: "password12345"
     }
 ];
+
+const seedUsers = () => User.bulkCreate(userData);
+
+module.exports = seedUsers;
