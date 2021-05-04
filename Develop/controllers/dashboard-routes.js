@@ -8,7 +8,7 @@ const checkAuthorization = require("../utils/authorization");
 router.get("/:id", checkAuthorization, async (req, res) => {
     try {
         const userSpecificPosts = await User.findByPk(req.params.id, {
-            include: 
+            include:
                 { model: Post, as: "post_creator" }
         });
         const usersPosts = userSpecificPosts.get({ plain:true });
@@ -20,3 +20,4 @@ router.get("/:id", checkAuthorization, async (req, res) => {
 });
 
 module.exports = router;
+//need to do dashboard routes
