@@ -35,9 +35,11 @@
             <a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a>
           </li>
           {{/if}}
+          {{#unless logged_in}}
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/signin">Sign in</a>
           </li>
+          {{/unless}}
           {{#if logged_in}}
           <li class="nav-item">
             <a class="nav-link active" id="logout" aria-current="page" href="/signout">Sign Out</a>
