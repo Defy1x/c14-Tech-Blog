@@ -42,7 +42,6 @@ margin-top: 10px;
 
 
 .form-signin {
-  width: 100%;
   max-width: 330px;
   padding: 15px;
   margin: auto;
@@ -50,6 +49,10 @@ margin-top: 10px;
 
 .form-signin .checkbox {
   font-weight: 400;
+}
+
+.resize{
+  width: 0% !important;
 }
 
 .form-signin .form-floating:focus-within {
