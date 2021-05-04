@@ -24,7 +24,7 @@ router.put("/:id", async (req, res) => {
             {
                 commentContent: req.body.commentContent
             },
-            {
+            { 
                 where: { id: req.params.id }
             });
             res.status(200).json(updatedComment);

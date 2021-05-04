@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
     }
 });
 
-// This makes a new user model
+// This makes a new instance of the user model
 // Make sure to attach the new user info to the req.body for this
 router.post("/", async (req, res) => {
     try {
@@ -69,7 +69,7 @@ router.post("/logout", (req, res) => {
     }
 });
 
-// At the moment the update hook is not working. Look into this later
+// We had to use individual hooks here because User.update seems to be eagerly loaded, so it needs to know to only act on the specific user???
 router.put("/:id", async (req, res) => {
     try {
         const updatedUserData = await User.update({
@@ -79,7 +79,8 @@ router.put("/:id", async (req, res) => {
             {
                 where: {
                     id: req.params.id
-                }
+                },
+                individualHooks: true
             })
         res.status(200).json(updatedUserData);
     } catch (err) {

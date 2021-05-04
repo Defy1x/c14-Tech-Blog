@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { User, Post, Comment } = require("../models");
-
+ 
 // We grab only the username and comment content from this?
 router.get("/", async (req, res) => {
     try {
@@ -14,8 +14,11 @@ router.get("/", async (req, res) => {
             ]
         });
         const posts = postsData.map((post) => post.get({ plain: true }));
+        console.log(posts);
         res.render("homepage", {
-            posts
+            posts,
+            logged_in: req.session.logged_in, // logged in status from the session object
+            userId: req.session.user_id // user id from the session object
         });
     } catch (err) {
         res.status(500).json(err);
