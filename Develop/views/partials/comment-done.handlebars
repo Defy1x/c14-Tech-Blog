@@ -1,9 +1,9 @@
 <div id="comment">
     {{#if logged_in}}
-    <a href="#" class="card-link">Add Comment</a>
+    <button href="#" class="card-link">Add Comment</button>
     {{/if}}
     {{#unless logged_in}}
-    <a href="#" class="card-link">Update</a>
-    <a href="#" class="card-link">Delete</a>
+    <button type="button" class="card-link update-comment" data-userid="{{userId}}" data-commentid="{{id}}">Update</button>
+    <button type="button" class="card-link delete-comment" data-userid="{{userId}}" data-commentid="{{id}}">Delete</button>
     {{/unless}}
  </div>
