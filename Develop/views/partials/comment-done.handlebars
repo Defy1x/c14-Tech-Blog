@@ -1,0 +1,9 @@
+<div id="comment">
+    {{#if logged_in}}
+    <a href="#" class="card-link">Add Comment</a>
+    {{/if}}
+    {{#unless logged_in}}
+    <a href="#" class="card-link">Update</a>
+    <a href="#" class="card-link">Delete</a>
+    {{/unless}}
+ </div>

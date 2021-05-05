@@ -65,3 +65,4 @@ document.querySelectorAll(".update-post").forEach((post) => {
 });
 document.querySelectorAll(".delete-post").forEach((post) => {
     post.addEventListener("click", deletePost);
+});
