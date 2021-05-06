@@ -12,10 +12,8 @@ EXPLANATION
     <h6 class="card-subtitle mb-2 text-muted">{{comment_creator.username}} on {{createdAt}}</h6>
     <p class="card-text input-content-{{id}}" contenteditable="true">{{commentContent}}</p>
     {{#eq userId ../userId}}
-      <p>These are equal</p>
       {{> comment-done }}
       {{else}}
-      <p>These are not equal</p>
     {{/eq}}
  </div>
 {{/each}}
