@@ -64,7 +64,7 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 Please add your user name and password to the config file. Also install npm packages needed to run this program.
 
 ## Deployed Link
-Coming soon.
+https://shielded-ravine-20519.herokuapp.com/
 
 #Usage
 ## Final screenshot
